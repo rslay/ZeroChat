@@ -23,7 +23,7 @@ Instead, your browser never finishes loading the whole page, and downloads messa
 
 Authentication is done with a passcode/tripcode system using PBKDF2 hashes.
 
-## Try it by visiting [zerochat.tech](zerochat.tech)
+## Try it by visiting [zerochat.tech](https://zerochat.tech)
 
 <a href="https://zerochat.tech">
   <img src="https://raw.githubusercontent.com/rslay/ZeroChat/master/public/images/preview.png" title="Preview of chat login page"/>
