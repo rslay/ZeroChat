@@ -4,17 +4,17 @@ ZeroChat
 
 <p align="center">
 
-<!-- [![Maintainability](https://api.codeclimate.com/v1/badges/84bdf069784f80804e43/maintainability)](https://codeclimate.com/github/WR4F/ZeroChat/maintainability)  -->
-<!-- [![Releases](https://badgen.net/github/release/WR4F/ZeroChat?v=1)](https://github.com/WR4F/ZeroChat/releases) -->
+<!-- [![Maintainability](https://api.codeclimate.com/v1/badges/84bdf069784f80804e43/maintainability)](https://codeclimate.com/github/rslay/ZeroChat/maintainability)  -->
+<!-- [![Releases](https://badgen.net/github/release/rslay/ZeroChat?v=1)](https://github.com/rslay/ZeroChat/releases) -->
 
 </p>
 
 <h3 align="center">
-  <a href="https://github.com/WR4F/ZeroChat/issues/new">Report a bug</a>
+  <a href="https://github.com/rslay/ZeroChat/issues/new">Report a bug</a>
   <span> · </span> 
-  <a href="https://github.com/WR4F/ZeroChat/pulls/new">Create a PR for contributions</a>
+  <a href="https://github.com/rslay/ZeroChat/pulls/new">Create a PR for contributions</a>
   <span> · </span> 
-  <a href="https://github.com/WR4F/ZeroChat/discussions">Discussions</a>
+  <a href="https://github.com/rslay/ZeroChat/discussions">Discussions</a>
 </h3>
 
 A live web chat. No client-side javascript, cookies, accounts, or `<meta http-equiv="refresh">` tags.
@@ -23,19 +23,24 @@ Instead, your browser never finishes loading the whole page, and downloads messa
 
 Authentication is done with a passcode/tripcode system using PBKDF2 hashes.
 
-## Try it by visiting [chat.justhack.in](https://chat.justhack.in)
+## Try it by visiting [zerochat.tech](zerochat.tech)
 
-<a href="https://chat.justhack.in"><img src="https://raw.githubusercontent.com/WR4F/ZeroChat/master/public/images/preview.png" title="Preview of chat login page"/></a>
+<a href="https://zerochat.tech"><img src="https://raw.githubusercontent.com/rslay/ZeroChat/master/public/images/preview.png" title="Preview of chat login page"/></a>
+
 
 **It's easy to self-host, and simple to use.** Developed with a security-first mentality.
 
 Run ZeroChat in just a [few commands with Docker](#self-hosting-with-docker)!
 
+Please leave a star if you like the project!
+
 #### Username and Password? But no accounts required!
+
 - You can login using a handle of your choosing, and enter a "passcode" which is hashed into a unique "tripcode" for your passcode only
 - A passcode is like a password, but no accounts are needed to enter a room, everyone just proves who they are by their tripcode
 
 #### Rooms
+
 - Choose from a preselected list of "public" rooms that are advertised on the front page by clicking the Room textbox twice. 
 - Or, enter any name you want for your room, and you'll "tune" into it like a radio frequency.
 
@@ -45,13 +50,13 @@ Wondering [how it's a live chat without javascript](https://justhack.in/stateful
 
 ## Setup & Dependencies
 
-This project requires NodeJS to run, unless you download one of the precompiled binary [releases](https://github.com/WR4F/ZeroChat/releases) (Supported only on windows).
+This project requires NodeJS to run, unless you download one of the precompiled binary [releases](https://github.com/rslay/ZeroChat/releases) (Supported only on windows).
 
 **There are three different ways to run ZeroChat, read below.**
 
 ### Setup ZeroChat on Windows
 
-Download from the [releases](https://github.com/WR4F/ZeroChat/releases) for executable binaries if you just want to run the chat server.
+Download from the [releases](https://github.com/rslay/ZeroChat/releases) for executable binaries if you just want to run the chat server.
 
 If you want to tweak the program and run the source code on Windows with/without docker, continue below.
 
@@ -69,17 +74,17 @@ Copy `.env.example` to `.env` and use that if you'd like to change things.
 
 Keep in mind that if you change the `PORT`, you should change the `EXPOSE` value in the `Dockerfile` and forwarded port in the `docker-compose.yml`.
 
-### Self Hosting setup without Docker
+### Running locally
 
 All you need is `node`, which comes with `npm`.
 
 Run the following to install the wonderful [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating) (for windows, [windows-nvm](https://github.com/coreybutler/nvm-windows)) NodeJS version manager.
 
-Then install NodeJS v16.2.0:
+Then install NodeJS v19:
 
 ```bash
-nvm install 16.2.0
-nvm use 16.2.0
+nvm install 19
+nvm use 19
 ```
 
 Finally, follow the steps below to set up and run ZeroChat.
@@ -89,7 +94,7 @@ Finally, follow the steps below to set up and run ZeroChat.
 Summary of the steps to be done:
 
 ```sh
-git clone https://github.com/WR4F/ZeroChat zerochat
+git clone https://github.com/rslay/ZeroChat zerochat
 cd zerochat
 npm install # Check .nvmrc for node version to use
 # Make an .env file and change the config, if needed
@@ -99,14 +104,14 @@ npm run start
 
 Explanation:
 
-- Download the repo to your machine: **`git clone https://github.com/WR4F/ZeroChat zerochat`**
+- Download the repo to your machine: **`git clone https://github.com/rslay/ZeroChat zerochat`**
   - Enter the new directory with **`cd zerochat`**
 - Install the dependencies for the project using **`npm install` or `yarn install`**
 - Configure the environmental variables by renaming the `.env.example` file to `.env`, e.g. for defaults: **`cp .env.example .env`**
   - If you're using a Platform as a Service (PaaS), such as **AWS LightSail or Heroku**, configure it using the service's environment variables settings based of values in the `.env.example` file, and refrain from using the `.env` file
 - Run the server using **`npm run start`**
 
-## ⚠ Common Issues
+## Common Issues
 
 ### Incompatible Node Version
 
@@ -132,9 +137,8 @@ server {
 ## Upcoming features
 
 Check the following places:
-- [Issue Tracker](https://github.com/WR4F/ZeroChat/issues)
-- [Pull requests](https://github.com/WR4F/ZeroChat/pulls)
-- [Discussions](https://github.com/WR4F/ZeroChat/discussions)
+- [Issue Tracker](https://github.com/rslay/ZeroChat/issues)
+- [Discussions](https://github.com/rslay/ZeroChat/discussions)
 
 ## Contributing
 
@@ -145,8 +149,3 @@ It’s good to have descriptive commit messages, or PR titles so that other cont
 ## How it works
 
 Here is the [article that explains how the chat is live without javascript](https://justhack.in/stateful-http)!
-
-## Show your support
-
-We love people\'s support in growing and improving. Be sure to leave a ⭐️ if you like the project and 
-also be sure to contribute, if you're interested!
